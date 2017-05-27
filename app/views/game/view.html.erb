@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>겜중독</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="view.scss">
+</head>
+
+<body>
+<%# <%= @lol.content %>
+<div class="container box" style="text-align:center">
+        <p><%= @user%>님과 닮은 챔피언을 불러왔습니다!</p>
+        
+        <br>
+    <img src="<%= @lol.url %>" class="champ">
+    <br>
+    <br>
+    <p>이 친구의 이름은 무엇일까요?</p>
+    
+    <br>
+    <form action="/view2" method="post">
+        <input type="text" name="quiz" class="form-control2">
+        <br>
+        <input type="submit" class="btn btn-primary" value="확인" >
+        <input type="text" name ="quiz_sol" value="<%=@lol.content%>" style="display:none;">
+        
+    </form>
+</div>
+
+</body>
