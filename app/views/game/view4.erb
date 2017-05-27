@@ -4,11 +4,15 @@
 <div class="container bodytitle2" style="text-align:center">
 
 <% if @quiz == @quiz_sol %>
-    <p "mb-3"> 정답입니다.</p>
-    <form action="/final" method="get">
-         <button onclick="location.href='/view3'" class="mb-2 btn btn-primary"> 다음단계로 </button>
-         <input type="text" name ="number" value="<%=@count %>" style="display:none;">
-    </form>
+
+    <div class="container">
+    <div class="boxx">
+<p>축하합니다!!!</p>
+<br>
+<p>게임 중독 입니다!</p>
+    </div>
+</div>
+  
     
 <% else %>
 
@@ -18,5 +22,5 @@
     <input type="text" name ="number" value="<%=@count %>" style="display:none;">
     </form>
 <% end %>
-    <p> 지금 까지 맞춘 문제수 : <%= @count %> </p>
+    
 </div>
